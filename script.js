@@ -61,7 +61,7 @@ function createCalc(expression) {
 }
 
 function clearScreen() {
-    displayText.style.fontSize = "80px"
+    displayText.style.fontSize = "70px"
     setDisplayContent("0");
     expression = "";
     displayText.classList.add("initial");
@@ -73,9 +73,12 @@ function setDisplayContent(str) {
         alert("That's big!");
         return;
     }
-    displayText.style.fontSize = "80px"
-    if (str.length > 8) {
-        let font = (8 - (str.length - 8)) * 10 + "px";
+    displayText.style.fontSize = "70px"
+    if (str.length > 7) {
+        let font = "60px";
+        if (str.length > 9) {
+            font = "50px";
+        }
         displayText.style.fontSize = font;
     }
     displayText.textContent = str;

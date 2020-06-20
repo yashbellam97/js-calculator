@@ -25,6 +25,7 @@ div {
     background-color: white;
     border-color: black;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .number {
@@ -41,6 +42,7 @@ div {
     grid-row: 1;
     border-radius: 10px;
     justify-content: end;
+    cursor: auto;
 }
 
 #display-text {

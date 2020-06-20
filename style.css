@@ -1,6 +1,16 @@
-div {
+body {
     text-align: center;
     user-select: none;
+    margin: 20px;
+}
+
+#github-link {
+    display: block;
+}
+
+#title-heading {
+    font-size: 40px;
+    font-family: sans-serif;
 }
 
 .container {
@@ -14,6 +24,7 @@ div {
     padding: 10px;
     font-family: sans-serif;
     background-color: black;
+    margin: 80px;
     font-size: xx-large;
 }
 

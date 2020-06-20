@@ -17,14 +17,14 @@ body {
     display: inline-grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    width: 500px;
-    height: 700px;
+    width: 400px;
+    height: 600px;
     border-style: solid;
     border-radius: 10px;
     padding: 10px;
     font-family: sans-serif;
     background-color: black;
-    margin: 80px;
+    margin: 60px;
     font-size: xx-large;
 }
 
@@ -57,7 +57,7 @@ body {
     grid-column: 1 / end;
     grid-row: 1;
     border-radius: 10px;
-    justify-content: end;
+    justify-content: flex-end;
     cursor: auto;
 }
 

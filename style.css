@@ -53,7 +53,7 @@ body {
 }
 
 #screen {
-    background-color: honeydew;
+    background-color: rgb(255, 250, 205);
     grid-column: 1 / end;
     grid-row: 1;
     border-radius: 10px;
@@ -69,7 +69,16 @@ body {
 #clear {
     background-color: rgb(245, 70, 70);
     color: white;
-    grid-column: 1 / span 2;
+    font-size: 40px;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#backspace {
+    background-color: rgb(160, 90, 90);
+    color: white;
+    font-weight: bold;
+    grid-column: 2;
     grid-row: 2;
 }
 

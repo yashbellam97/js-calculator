@@ -14,8 +14,20 @@ let expression = "";
 
 function buttonPress(event) {
     targetText = event.target.textContent;
-    if (targetText == "Clear") {
+    if (targetText == "C") {
         clearScreen();
+        return;
+    }
+    if (targetText == "⌫") {
+        if (!displayText.classList.contains("initial")) {
+            console.log("It ocntaine");
+            expression = expression.substring(0, expression.length - 1);
+            setDisplayContent(expression);
+            if (isNaN(expression.charAt(expression.length - 1))) {
+                operator = "";
+            }
+            if (expression.length == 0) clearScreen();
+        } else clearScreen();
         return;
     }
     if (event.target.textContent == "=") {
@@ -24,7 +36,6 @@ function buttonPress(event) {
             displayText.classList.add("initial");
         }
         return;
-        // operate();
     }
     if (event.target.classList.contains("operator") && targetText != ".") {
         if (expression.length == 0) return;
@@ -41,7 +52,7 @@ function buttonPress(event) {
     }
     if (targetText === "0" && displayText.textContent - 0 === 0 && displayText.classList.contains("initial")) {
         return;
-    } else if (targetText === "0" && displayText.textContent - 0 !== 0 && displayText.classList.contains("initial")){
+    } else if (targetText === "0" && displayText.textContent - 0 !== 0 && displayText.classList.contains("initial")) {
         displayText.textContent = "0";
         return;
     } else if (displayText.classList.contains("initial")) {
@@ -70,13 +81,13 @@ function clearScreen() {
 function setDisplayContent(str) {
     displayText.classList.remove("initial");
     if (str.length > 10) {
-        alert("That's big!");
+        alert("Um... That's a little too big");
         return;
     }
     displayText.style.fontSize = "70px"
     if (str.length > 7) {
         let font = "60px";
-        if (str.length > 9) {
+        if (str.length > 8) {
             font = "50px";
         }
         displayText.style.fontSize = font;
@@ -88,7 +99,7 @@ function setDisplayContent(str) {
 }
 
 function setDisplay(str) {
-    if(!isNaN(str)) str = Math.round(str * 100) / 100;
+    if (!isNaN(str)) str = Math.round(str * 100) / 100;
     setDisplayContent(str + "");
 }
 

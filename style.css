@@ -2,6 +2,8 @@ body {
     text-align: center;
     user-select: none;
     margin: 20px;
+    background: radial-gradient(#000 1px, transparent 1px);
+    background-size: 50px 50px;
 }
 
 #github-link {
